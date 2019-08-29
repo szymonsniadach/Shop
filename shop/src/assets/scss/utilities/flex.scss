@@ -1,0 +1,21 @@
+.flex {
+  display: flex;
+}
+
+.flex-center-horizontally {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-vertically {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
