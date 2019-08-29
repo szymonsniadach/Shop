@@ -1,0 +1,23 @@
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
+
+
+@mixin create-col($breakpoint) {
+  @for $i from 1 through 12 {
+    .col-#{$breakpoint}-#{$i} {
+      flex: 0 0 ((100% / 12) * $i);
+      max-width: (100% / 12) * $i;
+    }
+  }
+}
+
+@mixin create-container($breakpoint) {
+  .container {
+    max-width: map-get($breakpointsMaxWidth, $breakpoint);
+  }
+}

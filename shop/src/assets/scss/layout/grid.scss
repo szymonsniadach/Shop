@@ -1,0 +1,22 @@
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.row > [class^=col] {
+  position: relative;
+  padding: 0 15px;
+}
+
+@each $key, $value in $breakpoints {
+  @include media($key) {
+    @include create-container($key);
+    @include create-col($key);
+  }
+}
