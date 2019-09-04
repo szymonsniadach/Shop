@@ -7,9 +7,18 @@
 }
 
 
-@mixin create-col($breakpoint) {
+@mixin create-col-with-breakpoint($breakpoint) {
   @for $i from 1 through 12 {
     .col-#{$breakpoint}-#{$i} {
+      flex: 0 0 ((100% / 12) * $i);
+      max-width: (100% / 12) * $i;
+    }
+  }
+}
+
+@mixin create-col() {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
       flex: 0 0 ((100% / 12) * $i);
       max-width: (100% / 12) * $i;
     }

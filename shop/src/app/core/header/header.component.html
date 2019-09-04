@@ -1,13 +1,39 @@
-<header>
+<header class="header">
   <div class="container">
-    <div class="flex-center-vertically">
+    <div class="row align-items-center">
 
-      <div>
-        <img class="logo" src="assets/img/logo.png" alt="logo">
+      <div class="col-4 col-sm-3">
+        <div class="flex align-items-center">
+          <img class="logo" src="assets/img/logo.png" alt="logo">
+        </div>
       </div>
 
-      <div>
-        <input class="input-search" type="search" placeholder="Wyszukaj produkt">
+      <div class="col-3 col-md-6">
+        <input class="input-search w-100" type="search" placeholder="Wyszukaj produkt">
+      </div>
+
+      <div class="col-5 col-md-3">
+        <div class="flex justify-content-end">
+
+          <div class="header__dropdown-signin text-center mr-30">
+            <div class="mb-5">
+              <fa-icon [icon]="userIcon"></fa-icon>
+            </div>
+            <div class="d-none d-sm-block">
+              Zaloguj się lub załóż konto
+            </div>
+          </div>
+
+          <div class="header__cart text-center">
+            <div class="mb-5">
+              <fa-icon [icon]="cartIcon"></fa-icon>
+            </div>
+            <div class="d-none d-sm-block">
+              Twój koszyk
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>

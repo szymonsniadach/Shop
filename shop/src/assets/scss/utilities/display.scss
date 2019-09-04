@@ -1,0 +1,14 @@
+.d-none {
+  display: none;
+}
+
+@each $key, $value in $breakpoints {
+  @include media($key) {
+    .d-#{$key}-none {
+      display: none;
+    }
+    .d-#{$key}-block {
+      display: block;
+    }
+  }
+}

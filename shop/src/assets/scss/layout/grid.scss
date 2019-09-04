@@ -14,9 +14,11 @@
   padding: 0 15px;
 }
 
+@include create-col();
+
 @each $key, $value in $breakpoints {
   @include media($key) {
     @include create-container($key);
-    @include create-col($key);
+    @include create-col-with-breakpoint($key);
   }
 }
