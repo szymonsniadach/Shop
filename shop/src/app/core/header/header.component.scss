@@ -1,5 +1,22 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.header {
+  &__dropdown-signin {
+    width: 100px;
+  }
+
+  &>.container {
+    padding: 10px 0;
+  }
+}
+
 img.logo {
-  height: 70px;
+  height: 40px;
+
+  @include media(sm) {
+    height: 50px;
+  }
 }
 
 .input-search {
@@ -7,4 +24,8 @@ img.logo {
   height: 40px;
   border-radius: 20px;
   font-size: 1.2rem;
+}
+
+fa-icon {
+  font-size: 25px;
 }
