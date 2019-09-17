@@ -25,6 +25,10 @@
   justify-content: flex-end;
 }
 
+.justify-content-sb {
+  justify-content: space-between;
+}
+
 .align-items-start {
   align-items: flex-start;
 }
@@ -41,6 +45,6 @@
   align-items: stretch;
 }
 
-.align-selft-stretch {
+.align-self-stretch {
   align-self: stretch;
 }

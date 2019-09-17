@@ -1,3 +1,5 @@
+@import "abstracts/variables";
+
 $sides: (top, bottom, left, right);
 
 @for $i from 1 through 10 {
@@ -10,4 +12,37 @@ $sides: (top, bottom, left, right);
       padding-#{$side}: #{$i * 5}px !important;
     }
   }
+
+  .m-#{$i * 5} {
+    margin: #{$i * 5}px !important;
+  }
+
+  .p-#{$i * 5} {
+    padding: #{$i * 5}px !important;
+  }
+
+  .m-v-#{$i * 5} {
+    margin: #{$i * 5}px 0px !important;
+  }
+
+  .p-v-#{$i * 5} {
+    padding: #{$i * 5}px 0px !important;
+  }
+
+  .m-h-#{$i * 5} {
+    margin: 0px #{$i * 5}px !important;
+  }
+
+  .p-h-#{$i * 5} {
+    padding: 0px #{$i * 5}px !important;
+  }
+
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
 }

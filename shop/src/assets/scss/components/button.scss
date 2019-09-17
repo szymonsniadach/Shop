@@ -1,0 +1,22 @@
+@import "abstracts/color";
+
+.btn {
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: 'Homenaje', sans-serif;
+
+  &--green {
+    background: $color3;
+    color: #FFF;
+    border-radius: 5px;
+  }
+
+  &--empty {
+    padding: 5px 10px;
+    background: transparent;
+    color: #FFF;
+    border: 1px solid #FFF;
+  }
+
+}

@@ -2,13 +2,7 @@
 @import "abstracts/mixins";
 
 .header {
-  &__dropdown-signin {
-    width: 100px;
-  }
-
-  &>.container {
-    padding: 10px 0;
-  }
+  padding: 10px 0;
 }
 
 img.logo {
