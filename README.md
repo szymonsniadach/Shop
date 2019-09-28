@@ -1,7 +1,7 @@
 # Shop workspace
 
-shop -- shop application in Angular
+shop -- shop client in Angular
 
-shop-panel -- shop panel application in Angular
+(in future) shop-panel -- shop panel application in Angular
 
-shop-server -- shop server in Node.js
+(in future) shop-server -- shop server in Node.js
