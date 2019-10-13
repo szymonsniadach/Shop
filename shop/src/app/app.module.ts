@@ -6,18 +6,23 @@ import { AppComponent } from './app.component';
 import {httpInterceptorProviders} from './core/interceptors/interceptors';
 import { HeaderComponent } from './core/header/header.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { ProductBoxComponent } from './shared/components/product-box/product-box.component';
+import {ProductsModule} from '@modules/products/products.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductBoxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ProductsModule
   ],
   providers: [httpInterceptorProviders],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
