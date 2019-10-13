@@ -6,20 +6,26 @@ import { AppComponent } from './app.component';
 import {httpInterceptorProviders} from './core/interceptors/interceptors';
 import { HeaderComponent } from './core/header/header.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import { ProductBoxComponent } from './shared/components/product-box/product-box.component';
 import {ProductsModule} from '@modules/products/products.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import {ProductReducer} from '@core/state/products/products.reducer';
+import {ProductsEffects} from '@core/state/products/products.effects';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ProductBoxComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    StoreModule.forRoot({products: ProductReducer}), // TODO: add one reducer for all
+    EffectsModule.forRoot([ProductsEffects]), // TODO: add one effects for all
     FontAwesomeModule,
-    ProductsModule
+    ProductsModule,
   ],
   providers: [httpInterceptorProviders],
   exports: [],
