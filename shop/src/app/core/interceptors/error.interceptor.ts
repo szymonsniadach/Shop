@@ -10,8 +10,8 @@ export class ErrorInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       tap((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
-          if (event && event.body && !event.body.success) {
-            console.log(`Success false: ${req.url}<br>Error: ${event.statusText}`); // TODO: create notify widget
+          if (event && !event.body) {
+            console.log(`${req.url}<br>Error: ${event.statusText}`); // TODO: create notify widget
           }
         }
       })
