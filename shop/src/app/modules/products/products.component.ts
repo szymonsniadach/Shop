@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Store} from '@ngrx/store';
+import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 import {ProductModel} from '@shared/models/product.model';
 import {LoadProducts} from '@core/store/products/products.actions';
-import {AppState} from '@core/store/app.state';
+import {IAppState} from '@core/store/app.state';
 import {getProductList} from '@core/store/products/products.selector';
 
 @Component({
@@ -14,9 +14,9 @@ import {getProductList} from '@core/store/products/products.selector';
 })
 export class ProductsComponent implements OnInit {
 
-  public products$: Observable<ProductModel[]> = this.store.select(getProductList);
+  public products$: Observable<ProductModel[]> = this.store.pipe(select(getProductList));
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<IAppState>) { }
 
   ngOnInit() {
     this.store.dispatch(new LoadProducts());

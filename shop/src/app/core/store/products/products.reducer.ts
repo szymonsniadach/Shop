@@ -1,7 +1,7 @@
 import {ActionTypes, ProductActions} from '@core/store/products/products.actions';
-import {initialProductState, ProductState} from '@core/store/products/product.state';
+import {initialProductState, IProductState} from '@core/store/products/product.state';
 
-export const productReducer = (state = initialProductState, action: ProductActions): ProductState => {
+export const productReducer = (state = initialProductState, action: ProductActions): IProductState => {
   switch (action.type) {
     case ActionTypes.LOAD_PRODUCTS:
       return {

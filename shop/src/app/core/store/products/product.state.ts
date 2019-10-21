@@ -1,9 +1,9 @@
 import {ProductModel} from '@shared/models/product.model';
 
-export interface ProductState {
+export interface IProductState {
   products: ProductModel[];
 }
 
-export const initialProductState: ProductState = {
+export const initialProductState: IProductState = {
   products: null
 };

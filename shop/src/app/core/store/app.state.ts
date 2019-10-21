@@ -1,10 +1,10 @@
-import {initialProductState, ProductState} from '@core/store/products/product.state';
+import {initialProductState, IProductState} from '@core/store/products/product.state';
 
-export interface AppState {
+export interface IAppState {
   router?;
-  products: ProductState;
+  products: IProductState;
 }
 
-export const initialAppState: AppState = {
+export const initialAppState: IAppState = {
   products: initialProductState
 };
