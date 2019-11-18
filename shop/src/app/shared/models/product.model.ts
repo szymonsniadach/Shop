@@ -1,4 +1,4 @@
-export interface ProductModel {
+export interface IProduct {
   id: number;
   title: string;
   albumId?: number;

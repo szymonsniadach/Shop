@@ -1,19 +1,33 @@
 import {Action} from '@ngrx/store';
-import {ProductModel} from '@shared/models/product.model';
+import {IProduct} from '@shared/models/product.model';
 
 export enum ActionTypes {
-  LOAD_PRODUCTS = '[Products] Load products from server',
-  LOAD_PRODUCTS_SUCCESS = '[Products] Load products success'
+  GET_PRODUCTS = '[Products] Get products from server',
+  GET_PRODUCTS_SUCCESS = '[Products] Get products success',
+  GET_PRODUCT = '[Products] Get product',
+  GET_PRODUCT_SUCCESS = '[Products] Get product success'
 }
 
-export class LoadProducts implements Action {
-  readonly type = ActionTypes.LOAD_PRODUCTS;
+export class GetProducts implements Action {
+  readonly type = ActionTypes.GET_PRODUCTS;
 }
 
-export class LoadProductsSuccess implements Action {
-  readonly type = ActionTypes.LOAD_PRODUCTS_SUCCESS;
+export class GetProductsSuccess implements Action {
+  readonly type = ActionTypes.GET_PRODUCTS_SUCCESS;
 
-  constructor(public payload: ProductModel[]) {}
+  constructor(public payload: IProduct[]) {}
+}
+
+export class GetProduct implements Action {
+  readonly type = ActionTypes.GET_PRODUCT;
+
+  constructor(public payload: number) {}
+}
+
+export class GetProductSuccess implements Action {
+  readonly type = ActionTypes.GET_PRODUCT_SUCCESS;
+
+  constructor(public payload: IProduct) {}
 }
 
 // export class LoadProductsFail implements Action {
@@ -24,4 +38,4 @@ export class LoadProductsSuccess implements Action {
 
 
 
-export type ProductActions = LoadProducts | LoadProductsSuccess;
+export type ProductActions = GetProducts | GetProductsSuccess | GetProduct | GetProductSuccess;

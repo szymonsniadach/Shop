@@ -1,0 +1,5 @@
+<div class="product" *ngIf="product$">
+    <img src="{{product$?.url}}" alt="">
+    <div class="product__title">{{product$?.title}}</div>
+    <div class="product__description">{{product$?.description}}</div>
+</div>

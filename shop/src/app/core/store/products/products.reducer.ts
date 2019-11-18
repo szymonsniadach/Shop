@@ -3,14 +3,23 @@ import {initialProductState, IProductState} from '@core/store/products/product.s
 
 export const productReducer = (state = initialProductState, action: ProductActions): IProductState => {
   switch (action.type) {
-    case ActionTypes.LOAD_PRODUCTS:
+    case ActionTypes.GET_PRODUCTS:
       return {
         ...state
       };
-    case ActionTypes.LOAD_PRODUCTS_SUCCESS:
+    case ActionTypes.GET_PRODUCTS_SUCCESS:
       return {
         ...state,
         products: action.payload
+      };
+    case ActionTypes.GET_PRODUCT:
+      return {
+        ...state,
+      };
+    case ActionTypes.GET_PRODUCT_SUCCESS:
+      return {
+        ...state,
+        selectedProduct: action.payload
       };
     default:
       return state;

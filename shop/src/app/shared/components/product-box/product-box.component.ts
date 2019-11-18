@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {ProductModel} from '@shared/models/product.model';
+import {IProduct} from '@shared/models/product.model';
 
 @Component({
   selector: 'app-product-box',
@@ -9,7 +9,7 @@ import {ProductModel} from '@shared/models/product.model';
 })
 export class ProductBoxComponent implements OnInit {
 
-  @Input() product: ProductModel = null;
+  @Input() product: IProduct = null;
 
   constructor() { }
 
